@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>My Explorations with LLMs</title>
+<title>My Explorations with LLMs - Introduction:</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +20,59 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,77 +100,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">My Explorations with LLMs</span>
     </a>
   </div>
@@ -149,7 +123,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -172,13 +146,13 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">My Explorations with LLMs</h1>
+    <div class="quarto-title column-body">
+      <h1 class="title">Introduction:</h1>
                       </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
       
     
@@ -186,267 +160,81 @@ window.Quarto = {
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(7)</span></div><div class="category" data-category="LLMs">LLMs <span class="quarto-category-count">(5)</span></div><div class="category" data-category="logic">logic <span class="quarto-category-count">(5)</span></div><div class="category" data-category="prompting">prompting <span class="quarto-category-count">(5)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<div id="134b6386-1c0d-4fa2-8711-bb1f0af9ae43" class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>title: <span class="st">"Creating a Runway Show for LoveShackFancy"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>description: <span class="st">"Can AI understand LoveShackFancy's brand aesthetic?"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>date: <span class="st">"2/23/2024"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>categories:</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> LLMs</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> prompting</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> logic</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction:</h2>
+<p>LoveShackFancy is a rising fashion brand defined by its vintage aesthetic and its designs filled with ruffles, florals, and unique prints. To me, LoveShackFancy has one of the strongest brand images in the fashion industry; whenever I see one of their designs, I can tell that it’s LoveShackFancy. With this, I wanted to see if the Dall-E-3 model could understand unique brand images in fashion.</p>
+</section>
+<section id="prompt-1" class="level2">
+<h2 class="anchored" data-anchor-id="prompt-1">Prompt 1:</h2>
+<p>I obtained this description of LoveShackFancy from an article on Google to give to the model. After providing this information, I told the model to generate a runway design based on this.</p>
+<p>Launched by former fashion editor Rebecca Cohen in 2013, the US brand has become renowned for its ditsy retro prints, breezy white cotton sun dresses and cosy knitted cardigans. Now with childrenswear, swimwear and nightwear under its belt, and with bridal and interiors coming next, the label is morphing into much more than the dress label it once was, heading into the direction of a full-blown lifestyle brand. We caught up with Cohen to find out how she got here and what might be next.</p>
+<p>Like many of the most successful fashion brands, Cohen launched her label after spotting a gap in the market. When planning her wedding, she found that there were no bridesmaid dresses that captured what she was looking for, so she decided to make her own.</p>
+<p>“My mum and I decided to design these dreamy silk halter dresses that captured an ethereal but sexy sensibility,” she explained. “Everyone loved them and asked to purchase so I started hand-dying dresses in my backyard with my mum – playing around with a soft muted palette and selling them at trunk shows throughout the Hamptons.”</p>
+<p>An overflow of pink, prints, ruffles and lace that speaks not just to romantics at heart but anyone who wants to feel beautiful and confident in their own skin.Based on this information, create a hyper realistic design for a runway model for a fashion show for this brand.</p>
+</section>
+<section id="design-1" class="level2">
+<h2 class="anchored" data-anchor-id="design-1">Design 1</h2>
+<p><img src="lsf1.png" style="width:50%;"></p>
+<p>The design is quite simple but not bad. Let me try to generate another design using this prompt.</p>
+</section>
+<section id="design-2" class="level2">
+<h2 class="anchored" data-anchor-id="design-2">Design 2</h2>
+<p><img src="lsf2.png" style="width:50%;"></p>
+<p>Part of what defines LoveShackFancy is their use of bright and pastel colors. However, I noticed that these designs seemed muted so I decided to generate a different prompt.</p>
+</section>
+<section id="generating-a-new-prompt" class="level2">
+<h2 class="anchored" data-anchor-id="generating-a-new-prompt">Generating a New Prompt</h2>
+<p>I decided to use the gpt-4-vision-preview model to see how AI would describe LoveShackFancy’s brand. I input the image shown below and gave the prompt: “What’s in this image?”</p>
+<p><img src="lsf.jpg" style="width:50%;"></p>
+<p><em>In the image, I see a group of six individuals who appear to be women, dressed in various shades and styles of pink dresses. They are posing for a photo and some of them are wearing accessories such as headpieces adorned with flowers. Their outfits range from sparkly and embellished dresses to more ruffled and flowing fabrics. They are all smiling and appear to be in a celebratory mood. In the background, there is a wall decorated with an abundance of flowers, predominantly roses, which complement the pink theme of their attire. The setting suggests that they may be at a themed event or party.</em></p>
+<p>Since this seemed how AI would interpret LoveShackFancy’s brand, I then used this description as a prompt for the Dall-e-3 model.</p>
+</section>
+<section id="revamped-designs" class="level2">
+<h2 class="anchored" data-anchor-id="revamped-designs">Revamped Designs</h2>
+<p><img src="lsf4.png" style="width:50%;"></p>
+<p>The model recreated the image (I didn’t prompt it to create a design), but the style seemed to match LoveShackFancy’s! I then used this description and asked the model to create fashion designs based on it.</p>
+<section id="new-design-1" class="level4">
+<h4 class="anchored" data-anchor-id="new-design-1">New Design 1</h4>
+<p><img src="lsf5.png" style="width:50%;"></p>
+<p>This design seemed better than the first design. The model seems slightly scary but that’s ok.</p>
+</section>
+<section id="new-design-2" class="level4">
+<h4 class="anchored" data-anchor-id="new-design-2">New Design 2</h4>
+<p><img src="lsf6.png" style="width:50%;"></p>
+<p>This design is again better than the last one, but I noticed that it slowly wasn’t starting to represent LoveShackFancy’s brand anymore. With it’s tightfitting bodysuits and flower crowns, it seemed to start to feel like more of a Victoria’s Secret fashion show. I specifically wanted to get rid of the excessive flowers: floral prints would be ok, and accessive amount of flowers is not. I then prompted the model to remove the flowers.</p>
+</section>
+<section id="new-design-3" class="level4">
+<h4 class="anchored" data-anchor-id="new-design-3">New Design 3</h4>
+<p><img src="lsf9.png" style="width:50%;"></p>
+<p>The design of the dress is better but there are still many, <em>many</em> flowers to be seen. It seems that the model can’t detect flowers from it’s own design.</p>
 
 
+</section>
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1709077414251">
-<div class="thumbnail">
-<p><a href="./posts/001/Untitled.html" class="no-external"></a></p><a href="./posts/001/Untitled.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/001/Untitled.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/001/Untitled.html" class="no-external"></a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/001/Untitled.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/001/Untitled.html" class="no-external">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"></span>
-<span id="cb1-2"><span class="im">from</span> openai <span class="im">import</span> OpenAI</span>
-<span id="cb1-3"><span class="im">import</span> os</span>
-<span id="cb1-4">client <span class="op">=</span> OpenAI()</span>
-<span id="cb1-5"></span>
-<span id="cb1-6">response <span class="op">=</span> client.images.generate(</span>
-<span id="cb1-7">  model<span class="op">=</span><span class="st">"dall-e-3"</span>,</span>
-<span id="cb1-8">  prompt<span class="op">=</span><span class="st">"a white siamese cat"</span>,</span>
-<span id="cb1-9">  size<span class="op">=</span><span class="st">"1024x1024"</span>,</span>
-<span id="cb1-10">  quality<span class="op">=</span><span class="st">…</span></span><span id="cb1-11"><span class="op"></span><span class="dv"></span></span><span id="cb1-12"></span><span id="cb1-13"></span><span id="cb1-14"><span class="op"></span><span class="dv"></span></span></code></pre></div><div class="cell-output cell-output-error"><pre><code></code></pre></div></a>
-</div>
-</div>
-<div class="metadata">
-<p><a href="./posts/001/Untitled.html" class="no-external"></a></p><a href="./posts/001/Untitled.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1709077414375" data-listing-reading-time-sort="4" data-listing-word-count-sort="714">
-<div class="thumbnail">
-<p><a href="./posts/004/index.html" class="no-external"></a></p><a href="./posts/004/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/004/lsf1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/004/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/004/index.html" class="no-external">Introduction:</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/004/index.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/004/index.html" class="no-external">LoveShackFancy is a rising fashion brand defined by its vintage aesthetic and its designs filled with ruffles, florals, and unique prints. To me, LoveShackFancy has one of…</a>
-</div>
-</div>
-<div class="metadata">
-<p><a href="./posts/004/index.html" class="no-external"></a></p><a href="./posts/004/index.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="LLMs,prompting,logic" data-listing-date-sort="1708387200000" data-listing-file-modified-sort="1709077414703" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="396">
-<div class="thumbnail">
-<p><a href="./posts/005/index.html" class="no-external"></a></p><a href="./posts/005/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/005/fs1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/005/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/005/index.html" class="no-external">AI’s Representation of Race and Body Types in Fashion</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/005/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('LLMs'); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('prompting'); return false;">
-prompting
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('logic'); return false;">
-logic
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/005/index.html" class="no-external">In this blog I will be exploring whether AI models are representative when used for fashion</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/005/index.html" class="no-external">
-<div class="listing-date">
-Feb 20, 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="LLMs,prompting,logic" data-listing-date-sort="1708387200000" data-listing-file-modified-sort="1709077414311" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="332">
-<div class="thumbnail">
-<p><a href="./posts/003/index.html" class="no-external"></a></p><a href="./posts/003/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/003/starrynight1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/003/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/003/index.html" class="no-external">Painting Starry Night</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/003/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('LLMs'); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('prompting'); return false;">
-prompting
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('logic'); return false;">
-logic
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/003/index.html" class="no-external">In this blog I will be exploring whether I can use LLMs and AI image generation to recreate the famous painting by Van Gogh.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/003/index.html" class="no-external">
-<div class="listing-date">
-Feb 20, 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="LLMs,prompting,logic" data-listing-date-sort="1708387200000" data-listing-file-modified-sort="1709077414311" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="650">
-<div class="thumbnail">
-<p><a href="./posts/002/index.html" class="no-external"></a></p><a href="./posts/002/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/002/fashion1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/002/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/002/index.html" class="no-external">Can AI Interpret the Latest 2024 Fashion Trends? - Part 1</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/002/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('LLMs'); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('prompting'); return false;">
-prompting
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('logic'); return false;">
-logic
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/002/index.html" class="no-external">In this blog I will be exploring the most recent fashion trends by using images generated by AI.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/002/index.html" class="no-external">
-<div class="listing-date">
-Feb 20, 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="LLMs,prompting,logic" data-listing-date-sort="1708387200000" data-listing-file-modified-sort="1709077414711" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="509">
-<div class="thumbnail">
-<p><a href="./posts/006/index.html" class="no-external"></a></p><a href="./posts/006/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/006/IMG_1006.jpg"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/006/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/006/index.html" class="no-external">Exploring Snapchat AI</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/006/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('LLMs'); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('prompting'); return false;">
-prompting
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('logic'); return false;">
-logic
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/006/index.html" class="no-external">In this blog I will be exploring Snapchat’s AI Bot</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/006/index.html" class="no-external">
-<div class="listing-date">
-Feb 20, 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="LLMs,prompting,logic" data-listing-date-sort="1707350400000" data-listing-file-modified-sort="1709077414251" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1503">
-<div class="thumbnail">
-<p><a href="./posts/001/index.html" class="no-external"></a></p><a href="./posts/001/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/001/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/001/index.html" class="no-external">Blog Post 1: LLMs and Gen Z Slang</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/001/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('LLMs'); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('prompting'); return false;">
-prompting
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('logic'); return false;">
-logic
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/001/index.html" class="no-external">Modern Gen Z-ers are defined by the slang and lingo that they’ve created and use in everyday life. This new generation has their own definition of ‘cool’, and it starts off with the topics they speak about and how they talk. In this post I will explore if being ‘Gen Z Cool’ can be learned through LLMs.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/001/index.html" class="no-external">
-<div class="listing-date">
-Feb 8, 2024
-</div>
-<div class="listing-author">
-Emma Luo
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

@@ -3,9 +3,12 @@
     "listing": "/index.html",
     "items": [
       "/posts/001/Untitled.html",
+      "/posts/004/index.html",
+      "/posts/005/index.html",
+      "/posts/003/index.html",
       "/posts/002/index.html",
-      "/posts/001/index.html",
-      "/posts/000_test_post/index.html"
+      "/posts/006/index.html",
+      "/posts/001/index.html"
     ]
   }
 ]
