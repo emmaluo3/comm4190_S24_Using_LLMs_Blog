@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://emmaluo3.github.io/comm4190_S24_Using_LLMs_Blog/index.html</loc>
-    <lastmod>2024-03-12T18:41:43.754Z</lastmod>
-  </url>
-  <url>
-    <loc>https://emmaluo3.github.io/comm4190_S24_Using_LLMs_Blog/posts/001/index.html</loc>
-    <lastmod>2024-03-12T18:41:43.754Z</lastmod>
-  </url>
-  <url>
-    <loc>https://emmaluo3.github.io/comm4190_S24_Using_LLMs_Blog/posts/004/index.html</loc>
-    <lastmod>2024-03-12T18:41:43.878Z</lastmod>
-  </url>
-  <url>
-    <loc>https://emmaluo3.github.io/comm4190_S24_Using_LLMs_Blog/posts/005/index.html</loc>
-    <lastmod>2024-03-12T18:41:44.206Z</lastmod>
-  </url>
-  <url>
-    <loc>https://emmaluo3.github.io/comm4190_S24_Using_LLMs_Blog/posts/007/index.html</loc>
-    <lastmod>2024-03-12T18:41:44.294Z</lastmod>
-  </url>
-  <url>
-    <loc>https://emmaluo3.github.io/comm4190_S24_Using_LLMs_Blog/posts/006/index.html</loc>
-    <lastmod>2024-03-12T18:41:44.214Z</lastmod>
-  </url>
-  <url>
-    <loc>https://emmaluo3.github.io/comm4190_S24_Using_LLMs_Blog/posts/003/index.html</loc>
-    <lastmod>2024-03-12T18:41:43.814Z</lastmod>
+    <loc>https://emmaluo3.github.io/comm4190_S24_Using_LLMs_Blog/about.html</loc>
+    <lastmod>2024-03-12T18:41:59.698Z</lastmod>
   </url>
   <url>
     <loc>https://emmaluo3.github.io/comm4190_S24_Using_LLMs_Blog/posts/002/index.html</loc>
-    <lastmod>2024-03-12T18:41:43.814Z</lastmod>
+    <lastmod>2024-03-12T18:41:59.762Z</lastmod>
   </url>
   <url>
-    <loc>https://emmaluo3.github.io/comm4190_S24_Using_LLMs_Blog/about.html</loc>
-    <lastmod>2024-03-12T18:41:43.754Z</lastmod>
+    <loc>https://emmaluo3.github.io/comm4190_S24_Using_LLMs_Blog/posts/006/index.html</loc>
+    <lastmod>2024-03-12T18:42:00.162Z</lastmod>
+  </url>
+  <url>
+    <loc>https://emmaluo3.github.io/comm4190_S24_Using_LLMs_Blog/posts/007/index.html</loc>
+    <lastmod>2024-03-12T18:42:00.242Z</lastmod>
+  </url>
+  <url>
+    <loc>https://emmaluo3.github.io/comm4190_S24_Using_LLMs_Blog/posts/001/index.html</loc>
+    <lastmod>2024-03-12T18:41:59.702Z</lastmod>
+  </url>
+  <url>
+    <loc>https://emmaluo3.github.io/comm4190_S24_Using_LLMs_Blog/posts/003/index.html</loc>
+    <lastmod>2024-03-12T18:41:59.762Z</lastmod>
+  </url>
+  <url>
+    <loc>https://emmaluo3.github.io/comm4190_S24_Using_LLMs_Blog/posts/004/index.html</loc>
+    <lastmod>2024-03-12T18:41:59.826Z</lastmod>
+  </url>
+  <url>
+    <loc>https://emmaluo3.github.io/comm4190_S24_Using_LLMs_Blog/posts/005/index.html</loc>
+    <lastmod>2024-03-12T18:42:00.154Z</lastmod>
+  </url>
+  <url>
+    <loc>https://emmaluo3.github.io/comm4190_S24_Using_LLMs_Blog/index.html</loc>
+    <lastmod>2024-03-12T18:41:59.698Z</lastmod>
   </url>
 </urlset>
