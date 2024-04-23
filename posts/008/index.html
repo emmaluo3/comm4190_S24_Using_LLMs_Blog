@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-02-20">
-<meta name="description" content="In this blog I will be exploring whether AI models are representative when used for fashion">
+<meta name="dcterms.date" content="2024-04-04">
+<meta name="description" content="Creating April Fools Marketing Campaigns using AI">
 
-<title>My Explorations with LLMs - AI’s Representation of Race and Body Types in Fashion</title>
+<title>My Explorations with LLMs - April Fools!</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -115,16 +115,16 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">AI’s Representation of Race and Body Types in Fashion</h1>
+      <h1 class="title">April Fools!</h1>
                   <div>
         <div class="description">
-          In this blog I will be exploring whether AI models are representative when used for fashion
+          Creating April Fools Marketing Campaigns using AI
         </div>
       </div>
                           <div class="quarto-categories">
                 <div class="quarto-category">LLMs</div>
                 <div class="quarto-category">prompting</div>
-                <div class="quarto-category">logic</div>
+                <div class="quarto-category">marketing</div>
               </div>
                   </div>
   </div>
@@ -136,7 +136,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">February 20, 2024</p>
+        <p class="date">April 4, 2024</p>
       </div>
     </div>
     
@@ -155,28 +155,44 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>In the modern day, representation in fashion is key when creating new campaigns and designs. With this, I will be exploring whether the Dall-E-3 model understands the importance of representation and can portray it in the images it creates. To begin with, I prompted the model:</p>
-<p><em>Generate a design for runway model for New York Fashion Week Spring 2024. Make the design for a luxury designer brand and make the image hyper realistic.</em></p>
-<section id="images-created" class="level4">
-<h4 class="anchored" data-anchor-id="images-created">Images Created</h4>
-<p><img src="fs1.png" style="width:50%;"> <img src="fs2.png" style="width:50%;"> <img src="fs3.png" style="width:50%;"></p>
-<p>Surprisingly, the models are racially diverse but not very diverse in including different body types.</p>
-<p>With this, I wanted to explore whether the model combats against racially motivated prompts: <em>Generate a design for runway model for New York Fashion Week Spring 2024. Make the design for a luxury designer brand and make the image hyper realistic. The models can only be white.</em></p>
-<p><img src="fswhite.png" style="width:50%;"> <img src="fswhite2.png" style="width:50%;"></p>
-<p>The model doesn’t see as only wanting white models as problematic. However, if someone said “I only want white models” in real life when selecting models for a design, he/she would most likely be fired from their job. The model seems to detect direct statements that are discriminatory but not indirect ones (such as the example I provided.</p>
+<p>April Fools Day is known for its silly and outrageous jokes. However, more recently companies have been utilizing the day as an opportunity for eye-catching social media marketing campaigns. This can take place in many forms, from launching a “new product” to using satire within the advertisement. These campaigns often do incredibly well, garnering up to millions of likes and views, as these campaigns are bound to be shared with others. Here are some of my favorite marketing campaigns from this past April Fools:</p>
+<p><img src="maybelline.png" style="width:50%;"> <img src="soldejaneiro.png" style="width:50%;"> <img src="spicy9.png" style="width:50%;"></p>
+<section id="prompting" class="level2">
+<h2 class="anchored" data-anchor-id="prompting">Prompting</h2>
+<p>I first gave the example campaigns (pictured above) to Open AI Vision to convert the images to text: ### Sol de Janeiro: The image shows two cosmetic products with the branding “SOL DE JANEIRO”. One is labeled “ARANHA SPIDER SALVE” which suggests it might be a topical skin cream with descriptors like “Hydrate and 'perfumize'”, and the second is a “PERFUME MIST SPIDER PHEROMONE”. Both products feature a spider-themed design, hinting at spider-related properties or ingredients. The context of the setting seems to be a forest or jungle environment with a prominent spider web in the background, emphasizing the spider theme of these products. However, considering the unusual concept of spider-themed scents and creams, please be aware that this could be a fictional or novelty product, and such items might not actually contain spider-derived ingredients. ### Maybelline: This image features an advertisement for a cosmetic product. The product is a self-tanner named “Maybelline New York Dream Matte Mousse Self Tanner,” with a specific note on its chocolate mousse scent and body glow. The shade is “Honey Beige Medium.” It's marketed as being chocolate mousse scented and containing organic raw honey and vitamin C.advertisement makes several claims about the product's benefits, including:- Instant honey beige glow with no dry time.- Each application lasts 90 days.- White sheets proof, meaning it presumably won't stain bed linens.- Water-resistant, sweat-resistant, life-proof.’s important to note that some claims may be exaggerated (like a 90-day lasting period), as real performance can vary based on individual use and application. These claims are likely intended to highlight the durability and quality of the product. The emojis (an orange, a clock, a sleeping face, and a water droplet) also emphasize the product's properties such as the scent (orange for a fresh fruity smell), the time efficiency (clock for quick application and lasting effect), being mess-free (sleeping face indicating no stains on white sheets), and resistance to moisture (water droplet for water resistance). ### Spicy 9: The image features a layered dessert that appears to be a chocolate cake with multiple layers, and it's being drizzled or topped with a chocolate sauce or ganache. The design has graphic elements like creatively shaped white lines and yellow blobs that seem to suggest a playful and whimsical style. There's text overlaid on the image which states “We're Rebranding”, suggesting that a company or brand is undergoing a process to change and update their image or identity. Below the cake, there's a logo or brand name “SWEET 7” which could potentially be the name of the bakery or dessert shop related to the rebranding. The background shows a blurred interior space that looks like it could be a cafe or restaurant, with tables, chairs, and counters</p>
 </section>
-<section id="body-representation-in-ai" class="level4">
-<h4 class="anchored" data-anchor-id="body-representation-in-ai">Body Representation in AI</h4>
-<p><em>Generate a design for runway model for New York Fashion Week Spring 2024. Make the design for a luxury designer brand and make the image hyper realistic. This design is for a plus sized model.</em></p>
-<p><img src="fs7.png" style="width:50%;"> <img src="fs8.png" style="width:50%;"> <img src="fs9.png" style="width:50%;"></p>
-<p>Yikes… the first two images somewhat fit the prompt but the third one seemed completely random. However, even the first two images aren’t considered “plus size”. This is a major concern with this model, as it seems to have a set body type for fashion models.</p>
+<section id="generating-campaigns" class="level2">
+<h2 class="anchored" data-anchor-id="generating-campaigns">Generating Campaigns</h2>
+<p>I then prompted GPT 4 to create April Fools social media marketing campaigns for different companies based on the examples above. I then prompted Dall-e-3 with this description for it to create the campaign image.</p>
+<section id="trader-joes" class="level3">
+<h3 class="anchored" data-anchor-id="trader-joes">Trader Joes</h3>
+<p><em>GPT</em>: Social Media Post Description: Visual: The image features a beautifully styled photo of four elegantly designed bottles, each with a distinct, artistic label that represents the different “air flavors.” The bottles are set against backdrops that reflect their specific scents:</p>
+<p>Napa Valley Vineyard Breeze: A lush vineyard background with grapes and greenery. Hawaiian Coconut Winds: A serene beach scene with palm trees and a sunset. Vermont Maple Forest Draft: A tranquil forest with autumn leaves and a hint of morning fog. Portland Coffee Roast Zephyr: A cozy, dimly-lit coffee shop setting with coffee beans and a steaming cup. Each bottle appears to be capturing the essence of its environment, whimsically suggesting that you can open the bottle and experience the regional breeze.</p>
+<p>Caption: “🌬️✨ Introducing Trader Joe’s Essential Air Flavors! ✨🌬️ Ever wished you could bottle the refreshing breeze of Napa Valley or the warm winds of Hawaii? Now you can! Our NEW limited collection offers the essence of your favorite regions, captured in a bottle just for you. Swipe to explore our unique scents: Vineyard Breeze, Coconut Winds, Maple Forest, and Coffee Roast Zephyr. Available today only! 😉 #AprilFools #TJEssentials #BreatheInJoy”</p>
+<p>Engagement Strategy: Swipe Feature: Encourage users to swipe through multiple images, each focusing on one of the bottles with its corresponding backdrop, providing a closer look at the playful details. Call to Action: Ask followers to comment with the scent they’d love to try or to tag a friend who would believe these could be real. This fosters interaction and increases engagement. Hashtags: Use specific hashtags like #AprilFools, #TJEssentials, and a custom hashtag like #BreatheInJoy to promote sharing and visibility. This post would be playful and visually appealing, capturing the essence of Trader Joe’s brand while engaging the audience with a humorous April Fools’ twist.</p>
+<p><img src="traderjoes.png" style="width:50%;"></p>
+<p>Surprisingly, the image seems accurate, with even the words being mostly accurate, which I usually haven’t seen with Dall-e-3. However, the overall April Fools concept isn’t clear; the concept seems confusing and I don’t see the direct relation with humor/satire. The campaign also doesn’t directly relate to Trader Joes. The caption, on the otherhand seems to nail the humor aspect of an April Fools social media post.</p>
+<p>I suspected that my prompting was too broad so I told GPT to create a campaign for a popular Trader Joe’s product:</p>
+<p><em>GPT</em>: For a playful April Fools’ campaign centered on a popular Trader Joe’s product, let’s use their beloved “Everything But The Bagel Sesame Seasoning Blend” as a basis for an imaginative new product twist.</p>
+<p>Campaign Name: Trader Joe’s “Everything But The Bagel… Drink?” Concept: Trader Joe’s announces the launch of their latest innovative product, the “Everything But The Bagel Drink”. This faux product claims to be a liquid version of the famous seasoning, designed to provide all the flavor of your favorite bagel topping in a convenient, drinkable form. It promises a savory, spicy, and slightly salty beverage experience, perfect for on-the-go bagel lovers.</p>
+<p>Visual: The campaign image features a sleek, modern-looking bottle with clear glass that showcases a slightly cloudy, speckled liquid resembling the seasoning blend suspended in water. The label mimics the original seasoning packaging but adapted for a beverage, complete with quirky descriptions and serving suggestions, such as “Perfect for your morning rush!” or “Just shake and sip your way to flavor town!”</p>
+<p>Caption for Social Media Post: “🥯💧 Introducing the latest from Trader Joe’s: Everything But The Bagel Drink! Why sprinkle when you can sip? Get all the savory goodness of your favorite seasoning now in a refreshing beverage form. Limited time only - because who wouldn’t want their seasoning on-the-go? 😄 #TJEBTB #AprilFools #TraderJoes”</p>
+<p>Engagement Strategy: Product Image: A high-quality photo of the bottle, staged in a breakfast setting, perhaps next to a plain, unseasoned bagel, emphasizing the drink as an alternative. Humor and Interaction: The post should have a light-hearted tone, acknowledging the absurdity of the product. Ask followers to comment on other Trader Joe’s products they think should have a drinkable version. Hashtags and Sharing: Use hashtags like #AprilFools and #TraderJoes to track engagement. Encourage followers to share the post and tag friends who are Everything But The Bagel enthusiasts. This post leverages the popularity and iconic status of the Everything But The Bagel Seasoning at Trader Joe’s to create a humorous and memorable April Fools’ Day prank, engaging customers with the brand in a fun and creative way.</p>
+<p><img src="bagel.png" style="width:50%;"> This campaign was significantly better and I can see this being used for Trader Joes. I then asked GPT to create a campaign for Gong Cha.</p>
+</section>
+<section id="gong-cha" class="level3">
+<h3 class="anchored" data-anchor-id="gong-cha">Gong Cha</h3>
+<p>For an engaging April Fools’ campaign centered around Gong Cha, a popular bubble tea chain, let’s play with their famous Milk Tea.</p>
+<p>Campaign Name: Gong Cha “Bubble Tea Soup” Concept: Gong Cha announces the debut of their audacious new menu item, “Bubble Tea Soup.” This mock product is a humorous take on transforming their classic milk tea into a savory soup, complete with chewy tapioca pearls, claiming it’s the perfect blend of your favorite drink and a comforting soup.</p>
+<p>Visual: The image shows a bowl commonly used for Asian soups, filled with a broth-looking liquid resembling milk tea. The tapioca pearls float alongside unconventional savory soup ingredients such as tiny diced vegetables or small pieces of chicken, styled to still resemble a drink but clearly crossing into the territory of a light soup. The setting could be a cozy café table, enhancing the homely, comforting vibe of a soup.</p>
+<p>Caption for Social Media Post: “🍲☕ Introducing the revolutionary Bubble Tea Soup at Gong Cha! Why decide between a drink and a meal when you can have both? Experience our classic milk tea transformed into a warm, savory soup, complete with your favorite chewy pearls and a touch of gourmet. Perfect for those chilly days! Available today only. #GongChaGoesGourmet #AprilFools #BubbleTeaSoup”</p>
+<p>Engagement Strategy: Product Image: A creatively styled photo of the bubble tea soup in an elegant, traditional soup bowl, perhaps with a spoon and chopsticks on the side, to blur the lines between beverage and meal. Humor and Interaction: The post would maintain a playful tone, clearly nodding to the jest of turning a beloved cold drink into a hot soup. Encourage followers to share their reactions or suggest other creative food transformations. Hashtags and Sharing: Use tailored hashtags like #AprilFools and #GongChaGoesGourmet to facilitate sharing and track engagement across platforms. Prompt followers to tag friends who are Gong Cha fans or who love quirky food innovations. This mock campaign taps into the popularity of Gong Cha’s bubble tea while adding a humorous twist that engages customers in a lighthearted and memorable way, perfect for social media buzz on April Fools’ Day. <img src="boba.png" style="width:50%;"></p>
+<p>Wow… this is probably the weirdest combination of foods I’ve ever seen. This campaign is a little less effective as a marketing campaign (it is slightly less specific and organized) but can still work.</p>
 </section>
 </section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>Although the Dall-E-Model implements diversity measures when generating images, it doesn’t prevent indirectly racist regrets, specifically for fashion related purposes. In my opinion, this model should improve on detecting racially-motivated requests. Moreover, there is a bigger problem in which it’s definition of a runway model is tall and skinny, and doesn’t understand the definition of a plus size model. Representing a variety of body types in fashion is incredibly important, and this will present a problem if people are looking to use AI to illustrate designs on plus size models. Moreover, this causes issues with a lack of representation.</p>
+<p>Overall, GPT 4 seems to be aware of popular products of top brands. Brands can utilize this to effectively generate marketing campaign ideas.</p>
 
 
 </section>
